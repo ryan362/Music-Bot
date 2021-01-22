@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Database = require("@replit/database")
+require('dotenv').config();
 const db = new Database()
 var i = 0
 
@@ -74,6 +75,4 @@ client.on('message', message => {
 	}
 });
 
-
-
-client.login('ODAwNDc3Mjg4Mjc2ODE5OTgw.YASskQ.NOnMMvZxnEiXWkYB-b7gPyGsI6U');
+client.login(process.env.token);
